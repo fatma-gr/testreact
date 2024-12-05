@@ -1,7 +1,7 @@
-export const ajouter = (products,quantity) => {
-    return { type : "ajouter" , payload:products,quantity:quantity}
+export const ajouter = (products) => {
+    return { type: "ajouter", payload: products };
 }
 
-export const supprimer = (id) =>{
-    return{ type : "supprimer",payload:id}
+export const supprimer = (id) => {
+    return { type: "supprimer", payload: id };
 }

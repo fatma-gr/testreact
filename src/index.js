@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import App2 from './make-up/app';
 import { Provider } from 'react-redux';
-import store from './make-up/Productslice';
+import reducer from './make-up/reducer';
+import { legacy_createStore } from 'redux';
+const store = legacy_createStore(reducer)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <> 

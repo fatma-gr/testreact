@@ -12,6 +12,7 @@ import Furniture from "./furniture.js";
 import Groceries from "./groceries.js";
 import Footer from "./footer.js";
 import Product from "./product.js"
+import Slider from "./slider.js";
 export default function App2() {
     const [products, setProducts] = useState([]);
 
@@ -32,7 +33,8 @@ export default function App2() {
                 <Route path="/Groceries" element={<Groceries products={products} />} />
                 <Route path="*" element={<NotFound/>} />
                 <Route path="/Product/:id" element={<Product products={products} />} />
-                <Route path='/panier' element={<Panier />} />
+                <Route path="/panier" element={<Panier products={products}/>} />
+                <Route path="/slider" element={<Slider/>} />
             </Routes>
             <Footer/>
         </BrowserRouter>
