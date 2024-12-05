@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import App2 from './make-up/app';
+import { Provider } from 'react-redux';
+import store from './make-up/Productslice';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <> 
-  {/* <Provider store={store}>
-    <App />
-  </Provider> */}
-  <App2/>
+  <Provider store={store}>
+    <App2 />
+  </Provider>
  </>
 );
 

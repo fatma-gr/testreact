@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="container my-5">
+    <div className="container-fluid p-0">
       <footer style={{ backgroundColor: "#ffede7" }}>
-        <div className="container p-4">
+        <div className="container py-5">
           <div className="row">
             {/* Column 1 */}
             <div className="col-lg-3 col-md-6 mb-4">
@@ -126,15 +127,15 @@ export default function Footer() {
 
         {/* Copyright Section */}
         <div
-          className="text-center p-3"
+          className="text-center py-3"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
           © 2020 Copyright:{" "}
-          <a className="text-dark" href="https://mdbootstrap.com/">
-            MDBootstrap.com
-          </a>
+          <Link className="text-dark" to="/">
+            My store
+          </Link>
         </div>
       </footer>
-    </div>
-  );
+    </div>
+  );
 }

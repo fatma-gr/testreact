@@ -6,9 +6,12 @@ import Acceuil from "./acceuil.js";
 import Nav from "./nav.js";
 import Fragrances from "./fragrances.js";
 import Beauty from "./beauty.js";
+import NotFound from "./notfound.js";
+import Panier from "./panier.js";
 import Furniture from "./furniture.js";
 import Groceries from "./groceries.js";
 import Footer from "./footer.js";
+import Product from "./product.js"
 export default function App2() {
     const [products, setProducts] = useState([]);
 
@@ -20,13 +23,16 @@ export default function App2() {
 
     return (
         <BrowserRouter>
-        <Nav/>
+        <Nav />
             <Routes>
                 <Route path="/" element={<Acceuil products={products} />} />
                 <Route path="/fragrances" element={<Fragrances products={products} />} />
                 <Route path="/beauty" element={<Beauty products={products} />} />
                 <Route path="/furniture" element={<Furniture products={products} />} />
                 <Route path="/Groceries" element={<Groceries products={products} />} />
+                <Route path="*" element={<NotFound/>} />
+                <Route path="/Product/:id" element={<Product products={products} />} />
+                <Route path='/panier' element={<Panier />} />
             </Routes>
             <Footer/>
         </BrowserRouter>
