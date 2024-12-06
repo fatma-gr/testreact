@@ -24,19 +24,17 @@ export default function Cart() {
                             </tr>
                         </thead>
                         <tbody id="cart-items-body">
-                            {panier.map((products, i) => (
+                            {panier.map((product, i) => (
                                 <tr key={i}>
                                     <td>
-                                        <div className="d-flex align-items-center">
-                                            <span>{products.title}</span>
-                                        </div>
+                                        <p>{product.type}</p>
                                     </td>
-                                    <td>{products.price}</td>
+                                    <td>{product.price}</td>
                                     <td>
-                                        <p>{products.quantity}</p>
+                                        <p>{product.quantity}</p>
                                     </td>
                                     <td>
-                                        <button onClick={() => dispatch(supprimer(products.id))} className="btn btn-danger">
+                                        <button onClick={() => dispatch(supprimer(product.id))} className="btn btn-danger">
                                             Delete
                                         </button>
                                     </td>

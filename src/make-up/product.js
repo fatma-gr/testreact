@@ -21,7 +21,7 @@ export default function Product(props) {
             {product?(
                 <div className="product-container">
                     <div className="product-image">
-                        <img src={product.image} alt="Product" style={{ width: "250px" }} />
+                        <img src={product.images} alt="Product" style={{ width: "250px" }} />
                     </div>
                     <div className="product-content">
                         <form onSubmit={buy} className="form">
@@ -35,7 +35,7 @@ export default function Product(props) {
                                     <input type="number" id="quantity" min="1" value={quantity} onChange={e => setQuantity(e.target.value)}
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-primary">Buy</button>
+                                <button type="submit" style={{width : '6rem'}} className="btn btn-danger">Buy</button>
                             </div>
                         </form>
                     </div>

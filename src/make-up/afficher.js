@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Afficher(props) {
   return (
     <div className="col-md-4 col-lg-3 mb-4">
-      <div className="card h-100" style={{ backgroundColor: '#f8e5e5' }}>
+      <div className="card h-100 category-card">
         <img
           src={props.products.images[0]}
           className="card-img-top"
@@ -18,7 +18,7 @@ export default function Afficher(props) {
           <div className="mt-auto">
             <Link
               to={`/Product/${props.products.id}`}
-              className="btn btn-danger btn-sm w-100"
+              className="btn btn-danger w-100"
               style={{ textDecoration: 'none' }}
             >
               More Information

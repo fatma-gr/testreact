@@ -34,7 +34,7 @@ export default function App2() {
                 <Route path="*" element={<NotFound/>} />
                 <Route path="/Product/:id" element={<Product products={products} />} />
                 <Route path="/panier" element={<Panier products={products}/>} />
-                <Route path="/slider" element={<Slider/>} />
+                <Route path="/slider" element={<Slider />} />
             </Routes>
             <Footer/>
         </BrowserRouter>
